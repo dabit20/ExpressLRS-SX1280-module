@@ -1,0 +1,1188 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "ExpressLRS SX1280 module"
+Date "2020-04-28"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SX1280_module:STM32L412KBT6 U2
+U 1 1 5EA8EA8A
+P 5950 5600
+F 0 "U2" H 5500 6950 50  0000 C CNN
+F 1 "STM32L412KBT6" H 6350 4850 50  0000 C CNN
+F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 5450 4200 50  0001 R CNN
+F 3 "https://www.st.com/resource/en/datasheet/stm32l412kb.pdf" H 5950 5600 50  0001 C CNN
+F 4 "497-18229-ND" H 5950 5600 50  0001 C CNN "DIGIKEY_PARTNR"
+F 5 "Cortex-M4 MCU, 128k flash, 40k RAM, TQFP32" H 5950 5600 50  0001 C CNN "Description"
+F 6 "ST Microelectronics" H 5950 5600 50  0001 C CNN "Manufacturer"
+F 7 "STM32L412KBT6" H 5950 5600 50  0001 C CNN "Manufacturer_PN"
+	1    5950 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5EA904D5
+P 5850 6500
+F 0 "#PWR08" H 5850 6250 50  0001 C CNN
+F 1 "GND" H 5855 6327 50  0000 C CNN
+F 2 "" H 5850 6500 50  0001 C CNN
+F 3 "" H 5850 6500 50  0001 C CNN
+	1    5850 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 6500 5850 6450
+Wire Wire Line
+	5950 6400 5950 6450
+Wire Wire Line
+	5950 6450 5850 6450
+Connection ~ 5850 6450
+Wire Wire Line
+	5850 6450 5850 6400
+$Comp
+L SX1280_module:LP38692MPX-3.3_NOPB U1
+U 1 1 5EA9589F
+P 2550 2500
+F 0 "U1" H 2550 2742 50  0000 C CNN
+F 1 "LP38692MPX-3.3_NOPB" H 2550 2651 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-5" H 2550 2700 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lp38692.pdf" H 2650 2250 50  0001 C CNN
+F 4 "3.3V/1A LDO in SOT223, stable with ceramic output caps" H 2550 2500 50  0001 C CNN "Description"
+F 5 "Texas Instruments" H 2550 2500 50  0001 C CNN "Manufacturer"
+F 6 "LP38692MPX-3.3_NOPB" H 2550 2500 50  0001 C CNN "Manufacturer_PN"
+	1    2550 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5EA96A5D
+P 1900 2850
+F 0 "C1" H 2015 2896 50  0000 L CNN
+F 1 "2.2uF" H 2015 2805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1938 2700 50  0001 C CNN
+F 3 "~" H 1900 2850 50  0001 C CNN
+F 4 "2.2uF/16V capacitor, X7R 10%, 0603" H 1900 2850 50  0001 C CNN "Description"
+F 5 "Any" H 1900 2850 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 1900 2850 50  0001 C CNN "Manufacturer_PN"
+	1    1900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5EA97A19
+P 2550 3150
+F 0 "#PWR04" H 2550 2900 50  0001 C CNN
+F 1 "GND" H 2555 2977 50  0000 C CNN
+F 2 "" H 2550 3150 50  0001 C CNN
+F 3 "" H 2550 3150 50  0001 C CNN
+	1    2550 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2500 1900 2500
+Wire Wire Line
+	1900 2500 1900 2600
+Wire Wire Line
+	2250 2600 1900 2600
+Connection ~ 1900 2600
+Wire Wire Line
+	1900 2600 1900 2700
+Wire Wire Line
+	1900 3050 2550 3050
+Wire Wire Line
+	2550 3050 2550 3150
+Wire Wire Line
+	2550 2800 2550 3050
+Connection ~ 2550 3050
+$Comp
+L power:+3V3 #PWR05
+U 1 1 5EA99859
+P 3150 2300
+F 0 "#PWR05" H 3150 2150 50  0001 C CNN
+F 1 "+3V3" H 3165 2473 50  0000 C CNN
+F 2 "" H 3150 2300 50  0001 C CNN
+F 3 "" H 3150 2300 50  0001 C CNN
+	1    3150 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2500 3150 2500
+Wire Wire Line
+	3150 2500 3150 2300
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5EA9A7CB
+P 1000 2700
+F 0 "J1" H 972 2582 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 972 2673 50  0000 R CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Vertical" H 1000 2700 50  0001 C CNN
+F 3 "~" H 1000 2700 50  0001 C CNN
+F 4 "4-pin 2mm header. Do not assemble" H 1000 2700 50  0001 C CNN "Description"
+F 5 "Any" H 1000 2700 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 1000 2700 50  0001 C CNN "Manufacturer_PN"
+	1    1000 2700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1400 3050 1500 3050
+Connection ~ 1900 3050
+Wire Wire Line
+	1900 3000 1900 3050
+Text Label 1500 1900 0    50   ~ 0
+VIN
+Wire Wire Line
+	1200 2600 1400 2600
+Wire Wire Line
+	1400 2600 1400 3050
+$Comp
+L Device:C C3
+U 1 1 5EAA1022
+P 3150 2850
+F 0 "C3" H 3265 2896 50  0000 L CNN
+F 1 "2.2uF" H 3265 2805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3188 2700 50  0001 C CNN
+F 3 "~" H 3150 2850 50  0001 C CNN
+F 4 "2.2uF/16V capacitor, X7R 10%, 0603" H 3150 2850 50  0001 C CNN "Description"
+F 5 "Any" H 3150 2850 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 3150 2850 50  0001 C CNN "Manufacturer_PN"
+	1    3150 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3050 3150 3050
+Wire Wire Line
+	3150 3050 3150 3000
+Wire Wire Line
+	3150 2500 3150 2700
+Connection ~ 3150 2500
+$Comp
+L power:+3V3 #PWR07
+U 1 1 5EAA1E3C
+P 5850 3500
+F 0 "#PWR07" H 5850 3350 50  0001 C CNN
+F 1 "+3V3" H 5865 3673 50  0000 C CNN
+F 2 "" H 5850 3500 50  0001 C CNN
+F 3 "" H 5850 3500 50  0001 C CNN
+	1    5850 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4200 5950 4100
+Wire Wire Line
+	5950 4100 5850 4100
+Connection ~ 5850 4100
+Wire Wire Line
+	5850 4100 5850 4200
+Wire Wire Line
+	6050 4200 6050 4100
+Wire Wire Line
+	6050 4100 5950 4100
+Connection ~ 5950 4100
+$Comp
+L Device:C C4
+U 1 1 5EAA3FA3
+P 5400 3850
+F 0 "C4" V 5250 4000 50  0000 C CNN
+F 1 "100nF" V 5350 4050 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5438 3700 50  0001 C CNN
+F 3 "~" H 5400 3850 50  0001 C CNN
+F 4 "100nF/16V capacitor, X7R 10%, 0603" V 5400 3850 50  0001 C CNN "Description"
+F 5 "Any" H 5400 3850 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 5400 3850 50  0001 C CNN "Manufacturer_PN"
+	1    5400 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5EAA55FA
+P 5400 4100
+F 0 "C5" V 5250 4250 50  0000 C CNN
+F 1 "100nF" V 5350 4300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5438 3950 50  0001 C CNN
+F 3 "~" H 5400 4100 50  0001 C CNN
+F 4 "100nF/16V capacitor, X7R 10%, 0603" V 5400 4100 50  0001 C CNN "Description"
+F 5 "Any" H 5400 4100 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 5400 4100 50  0001 C CNN "Manufacturer_PN"
+	1    5400 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5850 3500 5850 3600
+Wire Wire Line
+	5550 3850 5850 3850
+Connection ~ 5850 3850
+Wire Wire Line
+	5850 3850 5850 4100
+Wire Wire Line
+	5550 4100 5850 4100
+$Comp
+L power:GND #PWR06
+U 1 1 5EAAA049
+P 5200 4150
+F 0 "#PWR06" H 5200 3900 50  0001 C CNN
+F 1 "GND" H 5205 3977 50  0000 C CNN
+F 2 "" H 5200 4150 50  0001 C CNN
+F 3 "" H 5200 4150 50  0001 C CNN
+	1    5200 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3850 5200 3850
+Wire Wire Line
+	5200 3850 5200 4100
+Wire Wire Line
+	5250 4100 5200 4100
+Connection ~ 5200 4100
+Wire Wire Line
+	5200 4100 5200 4150
+Wire Wire Line
+	6550 6050 7150 6050
+Wire Wire Line
+	6550 5950 7150 5950
+Text Label 6650 5950 0    50   ~ 0
+SWDIO
+Text Label 6650 6050 0    50   ~ 0
+SWCLK
+Text Label 7050 5850 0    50   ~ 0
+USB_DP
+Text Label 7050 5750 0    50   ~ 0
+USB_DM
+Text Label 4150 5950 0    50   ~ 0
+U1RX
+Text Label 4150 5850 0    50   ~ 0
+U1TX
+$Comp
+L Oscillator:ASE-xxxMHz X1
+U 1 1 5EAB4C03
+P 7650 4050
+F 0 "X1" H 7306 4096 50  0000 R CNN
+F 1 "ASE-8.000MHZ-LC-T" H 7306 4005 50  0000 R CNN
+F 2 "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm" H 8350 3700 50  0001 C CNN
+F 3 "http://www.abracon.com/Oscillators/ASV.pdf" H 7550 4050 50  0001 C CNN
+F 4 "3.3V CMOS SMD Crystal Oscillator, 3.2x2.5mm, 8.0000MHz, 50ppm" H 7650 4050 50  0001 C CNN "Description"
+F 5 "Abracon" H 7650 4050 50  0001 C CNN "Manufacturer"
+F 6 "ASE-8.000MHZ-LC-T" H 7650 4050 50  0001 C CNN "Manufacturer_PN"
+	1    7650 4050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5EAB62AC
+P 7650 4350
+F 0 "#PWR011" H 7650 4100 50  0001 C CNN
+F 1 "GND" H 7655 4177 50  0000 C CNN
+F 2 "" H 7650 4350 50  0001 C CNN
+F 3 "" H 7650 4350 50  0001 C CNN
+	1    7650 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR010
+U 1 1 5EAB67D8
+P 7650 3650
+F 0 "#PWR010" H 7650 3500 50  0001 C CNN
+F 1 "+3V3" H 7665 3823 50  0000 C CNN
+F 2 "" H 7650 3650 50  0001 C CNN
+F 3 "" H 7650 3650 50  0001 C CNN
+	1    7650 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5EAB7070
+P 7300 3700
+F 0 "C6" V 7150 3850 50  0000 C CNN
+F 1 "10nF" V 7250 3900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7338 3550 50  0001 C CNN
+F 3 "~" H 7300 3700 50  0001 C CNN
+F 4 "10nF/25V capacitor, X7R 10%, 0603" V 7300 3700 50  0001 C CNN "Description"
+F 5 "Any" H 7300 3700 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 7300 3700 50  0001 C CNN "Manufacturer_PN"
+	1    7300 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7450 3700 7650 3700
+Wire Wire Line
+	7650 3700 7650 3650
+Wire Wire Line
+	7650 3750 7650 3700
+Connection ~ 7650 3700
+$Comp
+L power:GND #PWR09
+U 1 1 5EAB8E83
+P 7150 3700
+F 0 "#PWR09" H 7150 3450 50  0001 C CNN
+F 1 "GND" H 7155 3527 50  0000 C CNN
+F 2 "" H 7150 3700 50  0001 C CNN
+F 3 "" H 7150 3700 50  0001 C CNN
+	1    7150 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5EAB9627
+P 7100 4050
+F 0 "R15" V 7000 4000 50  0000 C CNN
+F 1 "33E" V 7100 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 4050 50  0001 C CNN
+F 3 "~" H 7100 4050 50  0001 C CNN
+F 4 "33 Ohm/1%/0603 chip resistor" V 7100 4050 50  0001 C CNN "Description"
+F 5 "Any" H 7100 4050 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 7100 4050 50  0001 C CNN "Manufacturer_PN"
+	1    7100 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7250 4050 7350 4050
+Wire Wire Line
+	6550 4650 6900 4650
+Wire Wire Line
+	6900 4650 6900 4050
+Wire Wire Line
+	6900 4050 6950 4050
+Text Label 6600 4650 0    50   ~ 0
+CLK8M
+Wire Wire Line
+	7650 3700 7950 3700
+Wire Wire Line
+	7950 3700 7950 4050
+$Comp
+L Device:R R5
+U 1 1 5EABD81F
+P 4850 4200
+F 0 "R5" V 4750 4150 50  0000 C CNN
+F 1 "10k" V 4950 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4780 4200 50  0001 C CNN
+F 3 "~" H 4850 4200 50  0001 C CNN
+F 4 "10kOhm/1%/0603 chip resistor" V 4850 4200 50  0001 C CNN "Description"
+F 5 "Any" H 4850 4200 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 4850 4200 50  0001 C CNN "Manufacturer_PN"
+	1    4850 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4850 4050 4850 3600
+Wire Wire Line
+	4850 3600 5850 3600
+Connection ~ 5850 3600
+Wire Wire Line
+	5850 3600 5850 3850
+Wire Wire Line
+	5350 4400 4850 4400
+Wire Wire Line
+	4850 4400 4850 4350
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5EAC1314
+P 4550 4400
+F 0 "TP3" V 4550 4650 50  0000 C CNN
+F 1 "TestPoint" V 4654 4472 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4750 4400 50  0001 C CNN
+F 3 "~" H 4750 4400 50  0001 C CNN
+F 4 "Testpoint" H 4550 4400 50  0001 C CNN "Description"
+F 5 "Not Applicable" H 4550 4400 50  0001 C CNN "Manufacturer"
+F 6 "Not Applicable" H 4550 4400 50  0001 C CNN "Manufacturer_PN"
+	1    4550 4400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4850 4400 4550 4400
+Connection ~ 4850 4400
+$Comp
+L Device:R R4
+U 1 1 5EAC30EF
+P 2700 4650
+F 0 "R4" V 2600 4600 50  0000 C CNN
+F 1 "33E" V 2700 4650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2630 4650 50  0001 C CNN
+F 3 "~" H 2700 4650 50  0001 C CNN
+F 4 "33 Ohm/1%/0603 chip resistor" V 2700 4650 50  0001 C CNN "Description"
+F 5 "Any" H 2700 4650 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 2700 4650 50  0001 C CNN "Manufacturer_PN"
+	1    2700 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5EAC33E6
+P 2450 4800
+F 0 "C2" V 2300 4950 50  0000 C CNN
+F 1 "100nF" V 2400 5000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2488 4650 50  0001 C CNN
+F 3 "~" H 2450 4800 50  0001 C CNN
+F 4 "100nF/16V capacitor, X7R 10%, 0603" V 2450 4800 50  0001 C CNN "Description"
+F 5 "Any" H 2450 4800 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 2450 4800 50  0001 C CNN "Manufacturer_PN"
+	1    2450 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5EAC4293
+P 2200 4800
+F 0 "R3" V 2100 4750 50  0000 C CNN
+F 1 "10k" V 2300 4800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2130 4800 50  0001 C CNN
+F 3 "~" H 2200 4800 50  0001 C CNN
+F 4 "10kOhm/1%/0603 chip resistor" V 2200 4800 50  0001 C CNN "Description"
+F 5 "Any" H 2200 4800 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 2200 4800 50  0001 C CNN "Manufacturer_PN"
+	1    2200 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5EAC46D5
+P 2200 4950
+F 0 "#PWR03" H 2200 4700 50  0001 C CNN
+F 1 "GND" H 2205 4777 50  0000 C CNN
+F 2 "" H 2200 4950 50  0001 C CNN
+F 3 "" H 2200 4950 50  0001 C CNN
+	1    2200 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4650 2550 4650
+Wire Wire Line
+	2200 4650 2450 4650
+Connection ~ 2450 4650
+Wire Wire Line
+	2450 4950 2200 4950
+Connection ~ 2200 4950
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5EACAE43
+P 2150 4650
+F 0 "TP2" V 2150 4900 50  0000 C CNN
+F 1 "TestPoint" V 2254 4722 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2350 4650 50  0001 C CNN
+F 3 "~" H 2350 4650 50  0001 C CNN
+F 4 "Testpoint" H 2150 4650 50  0001 C CNN "Description"
+F 5 "Not Applicable" H 2150 4650 50  0001 C CNN "Manufacturer"
+F 6 "Not Applicable" H 2150 4650 50  0001 C CNN "Manufacturer_PN"
+	1    2150 4650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2150 4650 2200 4650
+Connection ~ 2200 4650
+Text Label 7050 5550 0    50   ~ 0
+USBVDD
+Wire Wire Line
+	1200 2500 1400 2500
+Wire Wire Line
+	1400 1900 1600 1900
+$Comp
+L Connector:USB_B_Micro J2
+U 1 1 5EAD631D
+P 1050 1350
+F 0 "J2" H 1107 1817 50  0000 C CNN
+F 1 "USB_B_Micro" H 1107 1726 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Wuerth_614105150721_Vertical_CircularHoles" H 1200 1300 50  0001 C CNN
+F 3 "~" H 1200 1300 50  0001 C CNN
+F 4 "Vertical micro-USB connector, THT" H 1050 1350 50  0001 C CNN "Description"
+F 5 "Wurth" H 1050 1350 50  0001 C CNN "Manufacturer"
+F 6 "614105150721" H 1050 1350 50  0001 C CNN "Manufacturer_PN"
+	1    1050 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5EAE3A0A
+P 1050 1850
+F 0 "#PWR01" H 1050 1600 50  0001 C CNN
+F 1 "GND" H 1055 1677 50  0000 C CNN
+F 2 "" H 1050 1850 50  0001 C CNN
+F 3 "" H 1050 1850 50  0001 C CNN
+	1    1050 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1150 2300 1150
+Wire Wire Line
+	2300 950  2300 1150
+Text Label 1500 1150 0    50   ~ 0
+USBVDD
+Wire Wire Line
+	1050 1750 1050 1800
+Wire Wire Line
+	950  1750 950  1800
+Wire Wire Line
+	950  1800 1050 1800
+Connection ~ 1050 1800
+Wire Wire Line
+	1050 1800 1050 1850
+Wire Wire Line
+	1350 1350 1750 1350
+Wire Wire Line
+	1350 1450 1750 1450
+NoConn ~ 1350 1550
+Text Label 1500 1450 0    50   ~ 0
+USB_DM
+Text Label 1500 1350 0    50   ~ 0
+USB_DP
+$Comp
+L Diode:MBR0520LT D1
+U 1 1 5EAEE7B7
+P 1750 1900
+F 0 "D1" H 1750 1684 50  0000 C CNN
+F 1 "MBR0520LT" H 1850 2000 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 1750 1725 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MBR0520LT1-D.PDF" H 1750 1900 50  0001 C CNN
+F 4 "20V/0.5A Schottky rectifier, SOD-123" H 1750 1900 50  0001 C CNN "Description"
+F 5 "ON Semiconductor" H 1750 1900 50  0001 C CNN "Manufacturer"
+F 6 "MBR0520LT" H 1750 1900 50  0001 C CNN "Manufacturer_PN"
+	1    1750 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:MBR0520LT D2
+U 1 1 5EAF4419
+P 2100 1900
+F 0 "D2" H 2100 2000 50  0000 C CNN
+F 1 "MBR0520LT" H 2150 1800 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2100 1725 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MBR0520LT1-D.PDF" H 2100 1900 50  0001 C CNN
+F 4 "20V/0.5A Schottky rectifier, SOD-123" H 2100 1900 50  0001 C CNN "Description"
+F 5 "ON Semiconductor" H 2100 1900 50  0001 C CNN "Manufacturer"
+F 6 "MBR0520LT" H 2100 1900 50  0001 C CNN "Manufacturer_PN"
+	1    2100 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 1900 1900 1900
+Wire Wire Line
+	2300 1900 2250 1900
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5EAFE093
+P 7150 5950
+F 0 "TP4" V 7150 6200 50  0000 C CNN
+F 1 "TestPoint" V 7254 6022 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7350 5950 50  0001 C CNN
+F 3 "~" H 7350 5950 50  0001 C CNN
+F 4 "Testpoint" H 7150 5950 50  0001 C CNN "Description"
+F 5 "Not Applicable" H 7150 5950 50  0001 C CNN "Manufacturer"
+F 6 "Not Applicable" H 7150 5950 50  0001 C CNN "Manufacturer_PN"
+	1    7150 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5EAFE869
+P 7150 6050
+F 0 "TP5" V 7150 6300 50  0000 C CNN
+F 1 "TestPoint" V 7254 6122 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7350 6050 50  0001 C CNN
+F 3 "~" H 7350 6050 50  0001 C CNN
+F 4 "Testpoint" H 7150 6050 50  0001 C CNN "Description"
+F 5 "Not Applicable" H 7150 6050 50  0001 C CNN "Manufacturer"
+F 6 "Not Applicable" H 7150 6050 50  0001 C CNN "Manufacturer_PN"
+	1    7150 6050
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5EB006C9
+P 7150 6250
+F 0 "TP6" V 7150 6500 50  0000 C CNN
+F 1 "TestPoint" V 7254 6322 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7350 6250 50  0001 C CNN
+F 3 "~" H 7350 6250 50  0001 C CNN
+F 4 "Testpoint" H 7150 6250 50  0001 C CNN "Description"
+F 5 "Not Applicable" H 7150 6250 50  0001 C CNN "Manufacturer"
+F 6 "Not Applicable" H 7150 6250 50  0001 C CNN "Manufacturer_PN"
+	1    7150 6250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5950 6450 7150 6450
+Wire Wire Line
+	7150 6450 7150 6250
+Connection ~ 5950 6450
+Text Label 7050 4750 0    50   ~ 0
+SX1280_SCK
+Text Label 7050 5050 0    50   ~ 0
+SX1280_nCS
+Text Label 7050 5150 0    50   ~ 0
+SX1280_nRESET
+Text Label 7050 5250 0    50   ~ 0
+SX1280_MISO
+Text Label 7050 5350 0    50   ~ 0
+SX1280_MOSI
+Text Label 7050 6150 0    50   ~ 0
+SX1280_BUSY
+Text Label 4150 5350 0    50   ~ 0
+SX1280_DIO1
+Text Label 4150 5550 0    50   ~ 0
+SX1280_RXEN
+Text Label 4150 5650 0    50   ~ 0
+SX1280_TXEN
+Wire Wire Line
+	6550 4850 7550 4850
+Wire Wire Line
+	6550 4950 7550 4950
+Text Label 7050 4850 0    50   ~ 0
+U2TX
+Text Label 7050 4950 0    50   ~ 0
+U2RX
+Wire Wire Line
+	6550 5550 7550 5550
+Wire Wire Line
+	6550 5750 7550 5750
+Wire Wire Line
+	6550 5850 7550 5850
+Text Label 4200 4650 0    50   ~ 0
+BOOT0
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5EB424D7
+P 2150 4550
+F 0 "TP1" V 2150 4800 50  0000 C CNN
+F 1 "TestPoint" V 2254 4622 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2350 4550 50  0001 C CNN
+F 3 "~" H 2350 4550 50  0001 C CNN
+F 4 "Testpoint" H 2150 4550 50  0001 C CNN "Description"
+F 5 "Not Applicable" H 2150 4550 50  0001 C CNN "Manufacturer"
+F 6 "Not Applicable" H 2150 4550 50  0001 C CNN "Manufacturer_PN"
+	1    2150 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR02
+U 1 1 5EB425FA
+P 2200 4500
+F 0 "#PWR02" H 2200 4350 50  0001 C CNN
+F 1 "+3V3" H 2215 4673 50  0000 C CNN
+F 2 "" H 2200 4500 50  0001 C CNN
+F 3 "" H 2200 4500 50  0001 C CNN
+	1    2200 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 4500 2200 4550
+Wire Wire Line
+	2200 4550 2150 4550
+Connection ~ 2300 1150
+Wire Wire Line
+	2300 1150 2300 1900
+Wire Wire Line
+	1400 1900 1400 2500
+$Comp
+L Device:R R2
+U 1 1 5EB4B7E2
+P 1900 2250
+F 0 "R2" V 2000 2250 50  0000 C CNN
+F 1 "0.12E" V 1800 2250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1830 2250 50  0001 C CNN
+F 3 "~" H 1900 2250 50  0001 C CNN
+F 4 "120mOhm/1%/0603 chip resistor" V 1900 2250 50  0001 C CNN "Description"
+F 5 "Any" H 1900 2250 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 1900 2250 50  0001 C CNN "Manufacturer_PN"
+	1    1900 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2100 1900 1900
+Connection ~ 1900 1900
+Wire Wire Line
+	1900 2400 1900 2500
+Connection ~ 1900 2500
+$Comp
+L Device:R R1
+U 1 1 5EB52423
+P 1650 3050
+F 0 "R1" V 1750 3050 50  0000 C CNN
+F 1 "0.12E" V 1550 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1580 3050 50  0001 C CNN
+F 3 "~" H 1650 3050 50  0001 C CNN
+F 4 "120mOhm/1%/0603 chip resistor" V 1650 3050 50  0001 C CNN "Description"
+F 5 "Any" H 1650 3050 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 1650 3050 50  0001 C CNN "Manufacturer_PN"
+	1    1650 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 3050 1900 3050
+$Comp
+L Device:R R6
+U 1 1 5EB52FD5
+P 5200 5850
+F 0 "R6" V 5150 5600 50  0000 C CNN
+F 1 "33E" V 5200 5850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5130 5850 50  0001 C CNN
+F 3 "~" H 5200 5850 50  0001 C CNN
+F 4 "33 Ohm/1%/0603 chip resistor" V 5200 5850 50  0001 C CNN "Description"
+F 5 "Any" H 5200 5850 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 5200 5850 50  0001 C CNN "Manufacturer_PN"
+	1    5200 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5EB53888
+P 5200 5950
+F 0 "R7" V 5150 5700 50  0000 C CNN
+F 1 "33E" V 5200 5950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5130 5950 50  0001 C CNN
+F 3 "~" H 5200 5950 50  0001 C CNN
+F 4 "33 Ohm/1%/0603 chip resistor" V 5200 5950 50  0001 C CNN "Description"
+F 5 "Any" H 5200 5950 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 5200 5950 50  0001 C CNN "Manufacturer_PN"
+	1    5200 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L SX1280_module:Ebyte_E28-2G4MxxS M1
+U 1 1 5EB72228
+P 10400 5750
+F 0 "M1" H 10575 6892 50  0000 C CNN
+F 1 "Ebyte_E28-2G4MxxS" H 10575 6801 50  0000 C CNN
+F 2 "SX1280_module:E28-2G4MxxS" H 10400 6850 50  0001 C CNN
+F 3 "http://www.ebyte.com/en/downpdf.aspx?id=401" H 10500 6300 50  0001 C CNN
+F 4 "Semtech SX1280 based radio module with +20dBm PA" H 10400 5750 50  0001 C CNN "Description"
+F 5 "Chengdu Ebyte" H 10400 5750 50  0001 C CNN "Manufacturer"
+F 6 "E28-2G4M20S" H 10400 5750 50  0001 C CNN "Manufacturer_PN"
+	1    10400 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5EB73C0D
+P 11250 5300
+F 0 "C7" H 11365 5346 50  0000 L CNN
+F 1 "2.2uF" H 11365 5255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11288 5150 50  0001 C CNN
+F 3 "~" H 11250 5300 50  0001 C CNN
+F 4 "2.2uF/16V capacitor, X7R 10%, 0603" H 11250 5300 50  0001 C CNN "Description"
+F 5 "Any" H 11250 5300 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 11250 5300 50  0001 C CNN "Manufacturer_PN"
+	1    11250 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5EB74E0A
+P 11700 5300
+F 0 "C8" H 11500 5250 50  0000 C CNN
+F 1 "10nF" H 11450 5350 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11738 5150 50  0001 C CNN
+F 3 "~" H 11700 5300 50  0001 C CNN
+F 4 "10nF/25V capacitor, X7R 10%, 0603" V 11700 5300 50  0001 C CNN "Description"
+F 5 "Any" H 11700 5300 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 11700 5300 50  0001 C CNN "Manufacturer_PN"
+	1    11700 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:L_Core_Ferrite L1
+U 1 1 5EB75C8A
+P 11250 4750
+F 0 "L1" H 11338 4796 50  0000 L CNN
+F 1 "742792601" H 11338 4705 50  0000 L CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 11250 4750 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1919498.pdf?_ga=2.267984203.477503528.1588231017-335236794.1584453232" H 11250 4750 50  0001 C CNN
+F 4 "WE-CBF ferrite bead, WE-CBF series, 30 Ohm @ 100MHz, 1Amp" H 11250 4750 50  0001 C CNN "Description"
+F 5 "Wurth" H 11250 4750 50  0001 C CNN "Manufacturer"
+F 6 "742792601" H 11250 4750 50  0001 C CNN "Manufacturer_PN"
+	1    11250 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5EB76DC5
+P 11250 5950
+F 0 "#PWR013" H 11250 5700 50  0001 C CNN
+F 1 "GND" H 11255 5777 50  0000 C CNN
+F 2 "" H 11250 5950 50  0001 C CNN
+F 3 "" H 11250 5950 50  0001 C CNN
+	1    11250 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11050 5050 11250 5050
+Wire Wire Line
+	11250 5050 11250 4900
+Wire Wire Line
+	11250 5150 11250 5050
+Connection ~ 11250 5050
+Wire Wire Line
+	11700 5150 11700 5050
+Wire Wire Line
+	11700 5050 11250 5050
+Wire Wire Line
+	11250 5450 11250 5550
+Wire Wire Line
+	11250 5550 11700 5550
+Wire Wire Line
+	11700 5550 11700 5450
+Wire Wire Line
+	11250 5550 11250 5650
+Connection ~ 11250 5550
+Wire Wire Line
+	11050 5850 11250 5850
+Connection ~ 11250 5850
+Wire Wire Line
+	11250 5850 11250 5950
+Wire Wire Line
+	11050 5750 11250 5750
+Connection ~ 11250 5750
+Wire Wire Line
+	11250 5750 11250 5850
+Wire Wire Line
+	11050 5650 11250 5650
+Connection ~ 11250 5650
+Wire Wire Line
+	11250 5650 11250 5750
+Wire Wire Line
+	11050 5550 11250 5550
+$Comp
+L power:+3V3 #PWR012
+U 1 1 5EB93EDE
+P 11250 4600
+F 0 "#PWR012" H 11250 4450 50  0001 C CNN
+F 1 "+3V3" H 11265 4773 50  0000 C CNN
+F 2 "" H 11250 4600 50  0001 C CNN
+F 3 "" H 11250 4600 50  0001 C CNN
+	1    11250 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 4750 9100 5050
+Wire Wire Line
+	9100 5050 9600 5050
+Wire Wire Line
+	8950 5050 8950 5150
+Wire Wire Line
+	8950 5150 9600 5150
+Wire Wire Line
+	8850 5150 8850 5250
+Wire Wire Line
+	8850 5250 9600 5250
+Wire Wire Line
+	8550 5250 8550 4950
+Wire Wire Line
+	8550 4950 9600 4950
+Wire Wire Line
+	8450 5350 8450 4850
+Wire Wire Line
+	8450 4850 9600 4850
+$Comp
+L Device:R R9
+U 1 1 5EBB3E6C
+P 9750 4950
+F 0 "R9" V 9700 5150 50  0000 C CNN
+F 1 "100E" V 9750 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 4950 50  0001 C CNN
+F 3 "~" H 9750 4950 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 9750 4950 50  0001 C CNN "Description"
+F 5 "Any" H 9750 4950 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 9750 4950 50  0001 C CNN "Manufacturer_PN"
+	1    9750 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5EBB3E73
+P 9750 5050
+F 0 "R11" V 9700 5250 50  0000 C CNN
+F 1 "100E" V 9750 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 5050 50  0001 C CNN
+F 3 "~" H 9750 5050 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 9750 5050 50  0001 C CNN "Description"
+F 5 "Any" H 9750 5050 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 9750 5050 50  0001 C CNN "Manufacturer_PN"
+	1    9750 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5EBB3E7A
+P 9750 5150
+F 0 "R12" V 9700 5350 50  0000 C CNN
+F 1 "100E" V 9750 5150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 5150 50  0001 C CNN
+F 3 "~" H 9750 5150 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 9750 5150 50  0001 C CNN "Description"
+F 5 "Any" H 9750 5150 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 9750 5150 50  0001 C CNN "Manufacturer_PN"
+	1    9750 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5EBB3E81
+P 9750 5250
+F 0 "R13" V 9700 5450 50  0000 C CNN
+F 1 "100E" V 9750 5250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 5250 50  0001 C CNN
+F 3 "~" H 9750 5250 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 9750 5250 50  0001 C CNN "Description"
+F 5 "Any" H 9750 5250 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 9750 5250 50  0001 C CNN "Manufacturer_PN"
+	1    9750 5250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9900 5250 10100 5250
+Wire Wire Line
+	9900 5150 10100 5150
+Wire Wire Line
+	9900 5050 10100 5050
+Wire Wire Line
+	9900 4950 10100 4950
+Wire Wire Line
+	6550 5050 8950 5050
+Wire Wire Line
+	6550 5150 8850 5150
+Wire Wire Line
+	6550 5250 8550 5250
+Wire Wire Line
+	6550 5350 8450 5350
+$Comp
+L Device:R R8
+U 1 1 5EBD94B1
+P 9750 4850
+F 0 "R8" V 9700 5050 50  0000 C CNN
+F 1 "100E" V 9750 4850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 4850 50  0001 C CNN
+F 3 "~" H 9750 4850 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 9750 4850 50  0001 C CNN "Description"
+F 5 "Any" H 9750 4850 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 9750 4850 50  0001 C CNN "Manufacturer_PN"
+	1    9750 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9900 4850 10100 4850
+$Comp
+L Device:R R14
+U 1 1 5EBD99B4
+P 9750 5350
+F 0 "R14" V 9700 5550 50  0000 C CNN
+F 1 "100E" V 9750 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 5350 50  0001 C CNN
+F 3 "~" H 9750 5350 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 9750 5350 50  0001 C CNN "Description"
+F 5 "Any" H 9750 5350 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 9750 5350 50  0001 C CNN "Manufacturer_PN"
+	1    9750 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5EBD9EA3
+P 9750 5450
+F 0 "R16" V 9700 5650 50  0000 C CNN
+F 1 "100E" V 9750 5450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 5450 50  0001 C CNN
+F 3 "~" H 9750 5450 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 9750 5450 50  0001 C CNN "Description"
+F 5 "Any" H 9750 5450 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 9750 5450 50  0001 C CNN "Manufacturer_PN"
+	1    9750 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 5EBD9FE6
+P 9750 5750
+F 0 "R17" V 9700 5950 50  0000 C CNN
+F 1 "100E" V 9750 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 5750 50  0001 C CNN
+F 3 "~" H 9750 5750 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 9750 5750 50  0001 C CNN "Description"
+F 5 "Any" H 9750 5750 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 9750 5750 50  0001 C CNN "Manufacturer_PN"
+	1    9750 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R18
+U 1 1 5EBDA2A3
+P 9750 5850
+F 0 "R18" V 9700 6050 50  0000 C CNN
+F 1 "100E" V 9750 5850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 5850 50  0001 C CNN
+F 3 "~" H 9750 5850 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 9750 5850 50  0001 C CNN "Description"
+F 5 "Any" H 9750 5850 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 9750 5850 50  0001 C CNN "Manufacturer_PN"
+	1    9750 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9900 5350 10100 5350
+Wire Wire Line
+	10100 5450 9900 5450
+Wire Wire Line
+	9900 5750 10100 5750
+Wire Wire Line
+	9900 5850 10100 5850
+Wire Wire Line
+	4050 5650 5350 5650
+Wire Wire Line
+	9600 5850 9600 6800
+Wire Wire Line
+	9600 6800 4050 6800
+Wire Wire Line
+	4050 6800 4050 5650
+Wire Wire Line
+	3950 5550 3950 6900
+Wire Wire Line
+	3950 6900 9500 6900
+Wire Wire Line
+	9500 6900 9500 5750
+Wire Wire Line
+	9500 5750 9600 5750
+Wire Wire Line
+	3950 5550 5350 5550
+Wire Wire Line
+	3850 5350 3850 7000
+Wire Wire Line
+	3850 7000 9400 7000
+Wire Wire Line
+	9400 7000 9400 5450
+Wire Wire Line
+	9400 5450 9600 5450
+Wire Wire Line
+	3850 5350 5350 5350
+Wire Wire Line
+	9300 5350 9600 5350
+NoConn ~ 6550 5650
+NoConn ~ 6550 5450
+NoConn ~ 10100 5550
+NoConn ~ 10100 5650
+$Comp
+L Device:LED D3
+U 1 1 5EC4637B
+P 3150 4200
+F 0 "D3" V 3189 4082 50  0000 R CNN
+F 1 "RED" V 3098 4082 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 3150 4200 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2046055.pdf?_ga=2.166001531.477503528.1588231017-335236794.1584453232" H 3150 4200 50  0001 C CNN
+F 4 "Kingbright" V 3150 4200 50  0001 C CNN "Manufacturer"
+F 5 "KP-1608EC" V 3150 4200 50  0001 C CNN "Manufacturer_PN"
+F 6 "Red LED, 0603" V 3150 4200 50  0001 C CNN "Description"
+	1    3150 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2850 4650 5350 4650
+$Comp
+L Device:LED D4
+U 1 1 5EC5EDE9
+P 3550 4200
+F 0 "D4" V 3589 4083 50  0000 R CNN
+F 1 "GRN" V 3498 4083 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 3550 4200 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2046055.pdf?_ga=2.166001531.477503528.1588231017-335236794.1584453232" H 3550 4200 50  0001 C CNN
+F 4 "Kingbright" V 3550 4200 50  0001 C CNN "Manufacturer"
+F 5 "KPT-1608SGC" V 3550 4200 50  0001 C CNN "Manufacturer_PN"
+F 6 "Green LED, 0603" V 3550 4200 50  0001 C CNN "Description"
+	1    3550 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 5EC5F81F
+P 3150 3900
+F 0 "R19" V 3100 4100 50  0000 C CNN
+F 1 "100E" V 3150 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3080 3900 50  0001 C CNN
+F 3 "~" H 3150 3900 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 3150 3900 50  0001 C CNN "Description"
+F 5 "Any" H 3150 3900 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 3150 3900 50  0001 C CNN "Manufacturer_PN"
+	1    3150 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 5EC60400
+P 3550 3900
+F 0 "R20" V 3500 4100 50  0000 C CNN
+F 1 "100E" V 3550 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3480 3900 50  0001 C CNN
+F 3 "~" H 3550 3900 50  0001 C CNN
+F 4 "100 Ohm/1%/0603 chip resistor" V 3550 3900 50  0001 C CNN "Description"
+F 5 "Any" H 3550 3900 50  0001 C CNN "Manufacturer"
+F 6 "Any" H 3550 3900 50  0001 C CNN "Manufacturer_PN"
+	1    3550 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3600 3550 3600
+Wire Wire Line
+	3150 3600 3150 3750
+Connection ~ 4850 3600
+Wire Wire Line
+	3550 3750 3550 3600
+Connection ~ 3550 3600
+Wire Wire Line
+	3550 3600 3150 3600
+Wire Wire Line
+	3550 4350 3550 4950
+Wire Wire Line
+	3550 4950 5350 4950
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5EC7B72D
+P 7550 4850
+F 0 "TP7" V 7550 5100 50  0000 C CNN
+F 1 "TestPoint" V 7654 4922 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7750 4850 50  0001 C CNN
+F 3 "~" H 7750 4850 50  0001 C CNN
+F 4 "Testpoint" H 7550 4850 50  0001 C CNN "Description"
+F 5 "Not Applicable" H 7550 4850 50  0001 C CNN "Manufacturer"
+F 6 "Not Applicable" H 7550 4850 50  0001 C CNN "Manufacturer_PN"
+	1    7550 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5EC7BBE4
+P 7550 4950
+F 0 "TP8" V 7550 5200 50  0000 C CNN
+F 1 "TestPoint" V 7654 5022 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7750 4950 50  0001 C CNN
+F 3 "~" H 7750 4950 50  0001 C CNN
+F 4 "Testpoint" H 7550 4950 50  0001 C CNN "Description"
+F 5 "Not Applicable" H 7550 4950 50  0001 C CNN "Manufacturer"
+F 6 "Not Applicable" H 7550 4950 50  0001 C CNN "Manufacturer_PN"
+	1    7550 4950
+	0    1    1    0   
+$EndComp
+NoConn ~ 5350 5750
+Wire Wire Line
+	6550 4750 9100 4750
+Wire Wire Line
+	9300 5350 9300 6150
+Wire Wire Line
+	9300 6150 6550 6150
+Wire Wire Line
+	1200 2800 1200 5850
+Wire Wire Line
+	1200 5850 5050 5850
+Wire Wire Line
+	1200 2700 1300 2700
+Wire Wire Line
+	1300 2700 1300 5950
+Wire Wire Line
+	1300 5950 5050 5950
+Wire Wire Line
+	5350 5250 3150 5250
+Wire Wire Line
+	3150 4350 3150 5250
+NoConn ~ 5350 5050
+$EndSCHEMATC

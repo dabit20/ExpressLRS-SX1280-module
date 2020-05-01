@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STM32L412KBT6
+D ARM Cortex-M4 MCU, 128KB flash, 40KB RAM, 80MHz, 1.71-3.6V, 26 GPIO, LQFP-32
+K ARM Cortex-M4 STM32L4 STM32L4x1
+F https://www.st.com/resource/en/datasheet/stm32l412kb.pdf
+$ENDCMP
+#
+#End Doc Library
